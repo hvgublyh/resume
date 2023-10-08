@@ -5,6 +5,7 @@ import { TypeStore } from '../../../redux/TypeStore';
 import css from  './css/header.module.scss'
 
 function Header() {
+
   const header: TypeHeader = useSelector((state: TypeStore) => state.userState.message.header)
   return (
     <div className={css.header + ' clearfix'}>

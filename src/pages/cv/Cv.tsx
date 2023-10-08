@@ -8,7 +8,7 @@ import css from './css/cv.module.scss'
 function CV() {
   return (
     <div className={css.cv}>
-      <Header></Header>
+      <Header ></Header>
       <Education></Education>
       <Skill></Skill>
       <Experience></Experience>
