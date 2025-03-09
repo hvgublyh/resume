@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
 import { TypeHeader } from '../../../assert/ts/MessageType'
 import { TypeStore } from '../../../redux/TypeStore';
-
 import css from  './css/header.module.scss'
+import img_zhengkj from '../../../assert/images/zhengkj.jpg'
 
 function Header() {
   const header: TypeHeader = useSelector((state: TypeStore) => state.userState.message.header)
@@ -20,7 +20,7 @@ function Header() {
       </div>
 
       <div className='header_img fr'>
-
+          <img src={img_zhengkj} alt="" />
       </div>
     </div>
   );

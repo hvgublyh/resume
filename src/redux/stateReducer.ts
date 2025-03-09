@@ -1,6 +1,6 @@
 import { createReducer } from "@reduxjs/toolkit";
 import { TypeMessage } from "../assert/ts/MessageType";
-import message from '../assert/ts/message.json'
+import message from '../assert/ts/message.js'
 
 
 export interface TypeState{

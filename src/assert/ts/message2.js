@@ -1,4 +1,4 @@
-{
+export default{
   "header": {
       "name": "议受二适",
       "messages": [
