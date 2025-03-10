@@ -8,7 +8,7 @@ function Experience() {
 
   return (
     <div className={css.experiences}>
-      <h1>experience</h1>
+      <h1>经历</h1>
       {experiences.map((experience) => (
         <div className='experience'>
           <div className='info clearfix'>
@@ -20,7 +20,9 @@ function Experience() {
               <div className='name'>{project.name}</div>
               <p>
                 <div className='title'>技术栈</div>
-                <div className='detail'>{project.tech}</div>
+                <div className='detail'>
+                  {project.tech.join('、')}
+                </div>
               </p>
               <p>
                 <div className='title'>详情</div>

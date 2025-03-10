@@ -7,7 +7,7 @@ function Skill() {
 
   return (
     <div className='skill'>
-      <h1>skills</h1>
+      <h1>技能</h1>
       <section>
         {skill.map((e) => (
           <p>{e}</p>
