@@ -7,7 +7,7 @@ import Page1 from './pages/demo/page1'
 import Page2 from './pages/demo/page2'
 import Page1A from './pages/demo/subpage/page1A';
 import reportWebVitals from './reportWebVitals';
-import 'antd/dist/antd.css';
+import 'antd/dist/reset.css'; // Modern Ant Design import
 import { Route, Routes, BrowserRouter } from "react-router-dom"
 import { Provider } from 'react-redux'
 import { store } from './redux/store';

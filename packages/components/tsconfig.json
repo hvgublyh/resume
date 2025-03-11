@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
+    "paths": {
+      // "@vueapps/components2": ["../component-library/src"],
+      // "@vueapps/components": ["../components/src"],
+      // "@vueapps/utils": ["../utils/src"]
+    },
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

@@ -1,60 +1,59 @@
 {
-  "name": "alldep",
-  "version": "0.1.0",
+  "name": "@vueapps/default",
   "private": true,
-  "homepage": ".",
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.8.2",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.39",
-    "@types/react": "^18.0.12",
-    "@types/react-dom": "^18.0.5",
-    "antd": "^4.21.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "husky install",
+    "build": "pnpm --filter=@vueapps/resume run build",
+    "dev": "pnpm --filter=@vueapps/resume run dev",
+    "commit": "cz",
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+  },
+  "packageManager": "pnpm@9.1.2",
+  "engines": {
+    "node": ">=14.19.0"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.22.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.24.0",
+    "@typescript-eslint/parser": "^5.24.0",
     "axios": "^0.27.2",
-    "moment": "^2.30.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.15.0",
+    "father-build": "^1.22.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-thunk": "^1.0.0",
-    "redux-devtools-extension": "^2.13.9",
-    "typescript": "^4.7.3",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "dev": "react-scripts start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "autoprefixer": "^9",
-    "node-sass": "^8.0.0",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "antd": "^5.24.3"
   }
 }

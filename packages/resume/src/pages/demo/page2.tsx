@@ -7,7 +7,7 @@ export default function Page2() {
   // const id = params.id; // 子路由携带参数
   // const [param] = useSearchParams()
   // const origin = param.get('origin') // 问号形式传参
-  const location = useLocation()
+  const location = useLocation() 
   const originPage  = location.state as string // state传参
   // const navigate = useNavigate()
   // const back = () => {
