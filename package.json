@@ -4,7 +4,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky install",
-    "build": "pnpm --filter=@vueapps/resume run build",
+    "build": "pnpm --filter=@vueapps/* run build",
     "dev": "pnpm --filter=@vueapps/resume run dev",
     "commit": "cz",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
