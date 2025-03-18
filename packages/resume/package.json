@@ -24,6 +24,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "start": "react-scripts start",
+    "pub": "./pub.sh",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -56,7 +57,7 @@
     "@vueapps/utils": "workspace:*",
     "autoprefixer": "^9",
     "babel-loader": "^10.0.0",
-    "node-sass": "^8.0.0",
+    "sass": "^1.80.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "ts-loader": "^9.5.2",

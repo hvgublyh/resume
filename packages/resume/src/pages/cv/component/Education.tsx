@@ -7,7 +7,7 @@ function Education() {
   const education: Array<TypeEducation> = useSelector((state: TypeStore) => state.userState.message.educations)
   return (
     <div className={css.education}>
-      <h1>教育</h1>
+      <h2 className="sectionTitle">教育</h2>
       <section>
         {education.map((e) => (
           <p>

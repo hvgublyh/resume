@@ -8,10 +8,19 @@ import css from './css/cv.module.scss'
 function CV() {
   return (
     <div className={css.cv}>
-      <Header ></Header>
-      <Education></Education>
-      <Skill></Skill>
-      <Experience></Experience>
+      <Header />
+
+      <section>
+        <Experience />
+      </section>
+
+      <section>
+        <Education />
+      </section>
+
+      <section>
+        <Skill />
+      </section>
     </div>
   );
 }

@@ -8,7 +8,7 @@ function Experience() {
 
   return (
     <div className={css.experiences}>
-      <h1>经历</h1>
+      <h2 className="sectionTitle">经历</h2>
       {experiences.map((experience) => (
         <div className='experience'>
           <div className='info clearfix'>
