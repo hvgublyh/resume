@@ -6,7 +6,7 @@
     "postinstall": "husky install",
     "build": "pnpm --filter=@vueapps/* run build",
     "dev": "pnpm --filter=@vueapps/resume run dev",
-    "pub": "pnpm --filter=@vueapps/resume run publish",
+    "pub": "pnpm --filter=@vueapps/resume run pub",
     "commit": "cz",
     "clear": "rimraf 'packages/{components,resume}/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
