@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import { Outlet } from "react-router-dom"
 import { InfoContext } from "../../context/page1Context"
-import Page1A from './subpage/page1A'
+// import Page1A from './subpage/page1A'
+import Page1A from '@/pages/demo/subpage/page1A'
 import { useState } from 'react'
 import { message } from 'antd'
 

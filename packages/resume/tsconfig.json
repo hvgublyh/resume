@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
+      "@/*": ["./src/*"],
       "@vueapps/components": ["../components/src"],
-      "@vueapps/utils": ["../utils/src"]
+      "@vueapps/utils": ["../utils/src"],
     },
     "target": "es5",
     "lib": [

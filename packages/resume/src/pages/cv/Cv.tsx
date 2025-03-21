@@ -9,17 +9,15 @@ function CV() {
   return (
     <div className={css.cv}>
       <Header />
-
-      <section>
-        <Experience />
-      </section>
-
       <section>
         <Education />
       </section>
 
       <section>
         <Skill />
+      </section>
+      <section>
+        <Experience />
       </section>
     </div>
   );

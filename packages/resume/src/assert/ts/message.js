@@ -6,7 +6,7 @@ const currentYear = moment().year()
 const currentAge = String(currentYear - birth)
 const graduationYear = currentYear - graduation - 1
 
-export default {
+const message = {
   "header": {
     "name": "郑康进",
     "messages": [
@@ -29,6 +29,7 @@ export default {
   "skills": [
     "精通Vue，熟悉Vuex、ElementUI、Vant等相关生态。",
     "熟悉React，熟悉React-Router、Redux等相关生态。",
+    "熟悉AI辅助开发。",
     "熟悉HTML5、CSS3、jQuery、ES6、TS。",
     "熟练使用ECharts数据可视化工具。",
     "熟悉前端工程化，熟悉Webpack打包工具，熟悉Git版本控制工具。",
@@ -127,3 +128,5 @@ export default {
     }
   ]
 }
+
+export default message
