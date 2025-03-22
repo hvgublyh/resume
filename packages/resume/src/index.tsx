@@ -6,6 +6,7 @@ import CV from './pages/cv/Cv'
 import Page1 from './pages/demo/page1'
 import Page2 from './pages/demo/page2'
 import Page1A from './pages/demo/subpage/page1A';
+import Home from './pages/home/Home';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/reset.css'; // Modern Ant Design import
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom"
@@ -38,7 +39,8 @@ root.render(
             <Route path="Page1A" element={<Page1A />} />
           </Route>
           <Route path="/page2" element={<Page2 />} />
-          <Route path="/" element={<CV />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           {/* Add a catch-all redirect to handle any unmatched routes */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

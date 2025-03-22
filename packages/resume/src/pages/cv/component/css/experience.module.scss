@@ -1,30 +1,32 @@
 .experiences {
   :global {
     .experience {
+      font-size: 14px;
       .info {
+        display: flex;
+        justify-content: space-between;
         margin-top: 10px;
         font-size: 16px;
+
         .company {
           font-weight: bold;
         }
       }
-  
       
-
       .project {
         margin-top: 10px;
+
         .name {
-          font-size: 16px;
           font-weight: bold;
           margin-bottom: 4px;
         }
 
         .title {
           float: left;
-          font-size: 16px;
           margin-right: 20px;
           min-width: 60px;
-        } 
+        }
+
         .detail {
           display: flex;
           gap: 4px;
