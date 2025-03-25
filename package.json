@@ -1,13 +1,14 @@
 {
-  "name": "@vueapps/default",
+  "name": "resume-monorepo",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "husky install",
-    "build": "pnpm --filter=@vueapps/* run build",
-    "dev": "pnpm --filter=@vueapps/resume run dev",
-    "pub": "pnpm --filter=@vueapps/resume run pub",
-    "pub:component": "pnpm --filter=@resume/components run publish:verdaccio",
+    "build": "pnpm --filter=@resume/* run build",
+    "dev:components": "pnpm --filter=@resume/components run dev",
+    "dev:resume": "pnpm --filter=@resume/resume run dev",
+    "dev": "concurrently \"npm run dev:components\" \"npm run dev:resume\"",
+    "pub": "pnpm --filter=@resume/resume run pub",
     "commit": "cz",
     "clear": "rimraf 'packages/{components,resume}/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
@@ -43,7 +44,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "concurrently": "^8.0.0"
   },
   "dependencies": {
     "antd": "^5.24.3"

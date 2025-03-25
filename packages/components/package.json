@@ -11,7 +11,7 @@
     "dist"
   ],
   "scripts": {
-    "dev": "tsup --watch --silent",
+    "dev": "rollup -c -w",
     "lint": "eslint --ext js,ts,tsx .",
     "test": "jest",
     "build": "rollup -c",
