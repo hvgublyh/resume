@@ -51,16 +51,16 @@ const message = {
             "ElementUI"
           ],
           "introduce": "一款建立于PC端低代码开发平台，可自定义表单，实现填报、审核、再填报、统计等功能。",
-          "duty": "项目搭建，页面布局，功能实现，与后端对接。"
+          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Vue3.0和Composition API构建项目。\n使用Jest和Vue-test-utils进行单元测试。"
         },
         {
           "name": "宣传预热",
           "tech": [
-            "Vue",
-            "ElementUI"
+            "React",
+            "Antd"
           ],
           "introduce": "一款建立于PC端低代码开发平台，可自定义海报及表单，用于APP端的宣传预热。",
-          "duty": "项目搭建，页面布局，功能实现，与后端对接。"
+          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Jest进行单元测试。\n使用React和Antd进行项目开发。"
         },
         {
           "name": "智慧运营中屏",
@@ -69,7 +69,7 @@ const message = {
             "ECharts"
           ],
           "introduce": "大屏项目",
-          "duty": "全部前端开发工作，完美还原设计图，实现良好的展示效果。"
+          "duty": "技术选型及项目框架搭建。\n使用ECharts进行数据可视化。\n使用Jest和Vue-test-utils进行单元测试。"
         },
         {
           "name": "其他一些项目",
@@ -78,10 +78,9 @@ const message = {
             "Lodash",
             "ECharts",
             "vue-awesome-swiper",
-              
           ],
           "introduce": "包括一些后台管理系统，官网等。",
-          "duty": "项目搭建，页面布局，功能实现，与后端对接。"
+          "duty": "新功能开发。\n维护项目。\n优化项目。\n解决线上问题。"
         }
       ]
     },
@@ -103,7 +102,7 @@ const message = {
             "Beetl"
           ],
           "introduce": "基于拖拽配置式的高安全性可视化快速开发平台。",
-          "duty": "基于需求，小组讨论实现方案，扩展平台功能。"
+          "duty": "进行页面布局调整及功能实现。\n利用ECharts创建直观、生动、可交互、可个性化定制的数据可视化图表。\n前后端交互实现平台功能。\n使用Beetl模板引擎进行页面渲染。"
         },
         {
           "name": "电子档案管理系统",
@@ -125,7 +124,7 @@ const message = {
             "Vant"
           ],
           "introduce": "金企文库是一款以文档管理为核心的简洁、高效的文档管理系统，拥有网盘式存储与文库式检索。",
-          "duty": "进行样式调整，适配不同分辨率，优化交互效果；利用ECharts创建直观、生动、可交互、可个性化定制的数据可视化图表。前后端交互实现文库功能。"
+          "duty": "进行页面布局调整及功能实现。\n利用web-uploader实现文件分段上传。"
         }
       ]
     }
