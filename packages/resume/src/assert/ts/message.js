@@ -51,7 +51,7 @@ const message = {
             "ElementUI"
           ],
           "introduce": "一款建立于PC端低代码开发平台，可自定义表单，实现填报、审核、再填报、统计等功能。",
-          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Vue3.0和Composition API构建项目。\n使用Jest和Vue-test-utils进行单元测试。"
+          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Vue3.0和Composition API构建项目。\n使用Jest和Vue-test-utils进行单元测试。\n使用Verdaccio搭建私有npm仓库, 统一管理公司内部组件。\n使用monorepo管理多个项目，并进行组件库的开发。"
         },
         {
           "name": "宣传预热",
@@ -60,7 +60,7 @@ const message = {
             "Antd"
           ],
           "introduce": "一款建立于PC端低代码开发平台，可自定义海报及表单，用于APP端的宣传预热。",
-          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Jest进行单元测试。\n使用React和Antd进行项目开发。"
+          "duty": "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Jest进行单元测试。\n使用React和Antd进行项目开发。\n使用Verdaccio搭建私有npm仓库, 统一管理公司内部组件。\n使用monorepo管理多个项目，并进行组件库的开发。"
         },
         {
           "name": "智慧运营中屏",

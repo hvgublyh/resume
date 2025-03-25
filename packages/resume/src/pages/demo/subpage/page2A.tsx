@@ -1,8 +1,8 @@
 
 // import { Button } from "antd";
-import { Button } from '@vueapps/components'
+import { Button } from '@resume/components'
 import { useNavigate } from "react-router-dom";
-import { alertTime } from '@vueapps/utils'
+import { alertTime } from '@resume/utils'
 
 
 export default function Page2A({ parentName }: { parentName: string | undefined }) {

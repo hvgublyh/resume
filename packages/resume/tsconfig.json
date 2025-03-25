@@ -3,8 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@vueapps/components": ["../components/src"],
-      "@vueapps/utils": ["../utils/src"]
+      "@resume/components": ["../components/src"],
+      "@resume/utils": ["../utils/src"]
     },
     "target": "es5",
     "lib": [

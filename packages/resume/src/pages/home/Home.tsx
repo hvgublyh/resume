@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         />
       </Header>
       <Content style={{ padding: '0 50px', marginTop: 20 }}>
-        <div className="site-layout-content" style={{ padding: 24, minHeight: 380, background: '#fff' }}>
+        <div className="site-layout-content" style={{ padding: 24, minHeight: 380 }}>
           <Title level={2}>个人博客</Title>
           <Paragraph>
             欢迎访问我的个人博客！在这里，您可以了解我的职业经历、技术能力和项目成果。
