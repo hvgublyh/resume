@@ -2,9 +2,9 @@
   "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "linked": [["@qftjs/*"]],
-  "access": "public",
-  "baseBranch": "main",
+  "linked": [],
+  "access": "restricted",
+  "baseBranch": "monorepo",
   "updateInternalDependencies": "patch",
   "ignore": [],
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
