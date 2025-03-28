@@ -27,7 +27,8 @@ root.render(
             <Route path="Page1A" element={<Page1A />} />
           </Route>
           <Route path="/page2" element={<Page2 />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Home />} >
+          </Route>
           <Route path="/" element={<Home />} />
           {/* Add a catch-all redirect to handle any unmatched routes */}
           <Route path="*" element={<Navigate to="/" replace />} />

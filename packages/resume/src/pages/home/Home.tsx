@@ -3,43 +3,14 @@ import { Layout, Menu, Card, Row, Col, Typography, Button } from 'antd';
 import { UserOutlined, HistoryOutlined, CodeOutlined, HomeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import css from './css/Home.module.scss';
+import MyLayout from '../layout/Layout';
 
 const { Header, Content, Footer } = Layout;
 const { Title, Paragraph } = Typography;
 
 const Home: React.FC = () => {
   return (
-    <Layout className={css.layout} style={{ minHeight: '100vh' }}>
-      <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', display: 'flex', alignItems: 'center' }}>
-        <div className="logo" />
-        <Menu
-          theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['home']}
-          items={[
-            {
-              key: 'home',
-              icon: <HomeOutlined />,
-              label: '首页',
-            },
-            {
-              key: 'resume',
-              icon: <UserOutlined />,
-              label: <Link to="/resume">简历</Link>,
-            },
-            {
-              key: 'experience',
-              icon: <HistoryOutlined />,
-              label: <Link to="#">个人经历</Link>,
-            },
-            {
-              key: 'tech',
-              icon: <CodeOutlined />,
-              label: <Link to="#">技术栈</Link>,
-            },
-          ]}
-        />
-      </Header>
+    <MyLayout>
       <Content style={{ padding: '0 50px', marginTop: 20 }}>
         <div className="site-layout-content" style={{ padding: 24, minHeight: 380 }}>
           <Title level={2}>个人博客</Title>
@@ -87,10 +58,7 @@ const Home: React.FC = () => {
           </Row>
         </div>
       </Content>
-      <Footer style={{ textAlign: 'center' }}>
-        个人博客 ©{new Date().getFullYear()} Created with React & Ant Design
-      </Footer>
-    </Layout>
+    </MyLayout>
   );
 };
 
