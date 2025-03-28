@@ -1,6 +1,6 @@
 {
   "name": "@resume/components",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "Resume UI components",
   "author": "Cedric van Putten <me@bycedric.com>",
   "license": "MIT",

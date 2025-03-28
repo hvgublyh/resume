@@ -1,6 +1,6 @@
 {
   "name": "@resume/resume",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -25,7 +25,7 @@
   "scripts": {
     "dev": "craco  start",
     "start": "craco  start",
-    "pub": "pub.sh",
+    "pub": "sh ./pub.sh",
     "build": "craco  build",
     "test": "craco  test",
     "eject": "craco  eject"

@@ -25,7 +25,7 @@ const Home: React.FC = () => {
             {
               key: 'resume',
               icon: <UserOutlined />,
-              label: <Link to="/cv">简历</Link>,
+              label: <Link to="/resume">简历</Link>,
             },
             {
               key: 'experience',
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
               >
                 <Card.Meta description="查看我的专业简历和职业技能" />
                 <Button type="primary" style={{ marginTop: 16 }}>
-                  <Link to="/cv">查看简历</Link>
+                  <Link to="/resume">查看简历</Link>
                 </Button>
               </Card>
             </Col>

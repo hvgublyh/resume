@@ -1,5 +1,7 @@
 # @resume/components
 
+## 1.0.0
+
 ## 1.0.0-beta.2
 
 ### Major Changes
