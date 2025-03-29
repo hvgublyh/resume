@@ -9,6 +9,8 @@
     "dev:resume": "pnpm --filter=@resume/resume run dev",
     "dev": "concurrently \"npm run dev:components\" \"npm run dev:resume\"",
     "pub": "pnpm --filter=@resume/resume run pub",
+    "pub:components": "pnpm --filter=@resume/components run pub",
+    "pub:utils": "pnpm --filter=@resume/utils run pub",
     "commit": "cz",
     "clear": "rimraf 'packages/{components,resume}/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",

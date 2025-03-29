@@ -1,0 +1,53 @@
+function getNames(obj, level) {
+  const json = {};
+  let currLevel = 0;
+  function getMethod(object, maxLevel, oldjson) {
+    currLevel++;
+    if (currLevel < maxLevel && object) {
+      if (object instanceof Array) {
+        object.forEach((value, key) => {
+          if (object[key] instanceof Function) {
+            oldjson[key] = 'f()';
+          } else if (object[key] instanceof Array) {
+            oldjson[key] = [];
+          } else if (object[key] instanceof Object) {
+            oldjson[key] = {};
+          } else if (typeof object[value] === 'number') {
+            oldjson[key] = object[key];
+          } else if (typeof object[value] === 'string') {
+            oldjson[key] = object[key];
+          } else {
+            oldjson[key] = typeof object[key];
+          }
+          const getObj = object[key];
+          if (!(getObj instanceof Function) && (getObj instanceof Object || getObj instanceof Array)) {
+            getMethod(getObj, maxLevel, oldjson[key]);
+          }
+        });
+      } else if (object instanceof Object) {
+        Object.getOwnPropertyNames(object).forEach((value) => {
+          if (object[value] instanceof Function) {
+            oldjson[value] = 'f()';
+          } else if (object[value] instanceof Array) {
+            oldjson[value] = [];
+          } else if (object[value] instanceof Object) {
+            oldjson[value] = {};
+          } else if (typeof object[value] === 'number') {
+            oldjson[value] = object[value];
+          } else if (typeof object[value] === 'string') {
+            oldjson[value] = object[value];
+          } else {
+            oldjson[value] = typeof object[value];
+          }
+          const getObj = object[value];
+          if (!(getObj instanceof Function) && (getObj instanceof Object || getObj instanceof Array)) {
+            getMethod(getObj, maxLevel, oldjson[value]);
+          }
+        });
+      }
+    }
+    currLevel--;
+  }
+  getMethod(obj, level, json);
+  return JSON.stringify(json);
+}

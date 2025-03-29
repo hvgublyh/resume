@@ -4,17 +4,25 @@
     .header_img {
       position: absolute;
       right: 0;
-      top: 80px;
+      top: -20px;
       width: 160px;
       height: auto;
       background-color:aqua;
+      
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
     .name {
       font-size: 24px;
       margin-bottom: 15px;
+      text-align: center;
     }
     ul {
       display: flex;
+      list-style: none;
+
       li {
         margin-right: 15px;
         padding-right: 10px;

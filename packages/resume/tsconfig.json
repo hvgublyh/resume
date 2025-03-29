@@ -28,7 +28,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src", "typings.d.ts"
   ],
   "rules": {
     "no-implicit-dependencies": ["optional", ["src"]] // 提示地址

@@ -15,7 +15,7 @@
     "lint": "eslint --ext js,ts,tsx .",
     "test": "jest",
     "build": "rollup -c",
-    "publish:verdaccio": "npm run build && npm publish --registry http://localhost:4873"
+    "pub": "npm run build && npm publish --registry http://localhost:4873"
   },
   "devDependencies": {
     "@testing-library/react-native": "^12.9.0",

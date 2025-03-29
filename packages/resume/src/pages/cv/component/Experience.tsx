@@ -11,7 +11,7 @@ function Experience() {
       <h2 className="sectionTitle">经历</h2>
       {experiences.map((experience) => (
         <div className='experience'>
-          <div className='info clearfix'>
+          <div className='info'>
             <div className='fl company'>{experience.company}</div>
             <div className='fr startTime'>{experience.startTime + '-' + experience.endTime}</div>
           </div>

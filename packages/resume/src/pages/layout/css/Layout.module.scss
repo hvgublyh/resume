@@ -1,13 +1,30 @@
 .layout {
   background-color: transparent;
+
   :global {
-      .ant-card-hoverable {
-          border-radius: 5px;
-          box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
-          border: none;
+    .ant-layout-header {
+      height: 48px;
+      line-height: 48px;
+      .ant-menu {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
       }
-      .ant-layout-footer {
-          background-color: transparent;
+      .ant-menu-item {
+        line-height: 32px;
+        height: 32px;
       }
+    }
+
+    .ant-card-hoverable {
+      border-radius: 5px;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+      border: none;
+    }
+
+    .ant-layout-footer {
+      background-color: transparent;
+    }
   }
 }

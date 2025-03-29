@@ -1,0 +1,26 @@
+/*分页*/
+.layui-laypage{float: right;margin-right: 13px !important;}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{background-color: #2980FF}
+.layui-table-page .layui-laypage input{width: 40px!important;}
+.layui-table-page .layui-laypage select,.layui-table-page .layui-laypage-curr,.layui-table-page .layui-laypage-btn{border-radius: 2px;}
+.layui-laypage .layui-laypage-skip{color: #333;}
+.layui-table-page{overflow: visible}
+.layui-table-page .layui-laypage-limits select{display: none!important;}
+
+//下拉框关键
+.layui-table-page .layui-laypage input{
+    height: 29px;
+    border-radius: 3px;
+    border: 1px solid #DDDEE1;
+    padding: 0 5px;
+    letter-spacing: 1px;
+    color: #464C5B;
+    margin: 0 5px;
+    width: 84px!important;
+    text-align: left;
+}
+.layui-table-page .layui-anim{
+    top:-305px;
+    min-width: calc(100% - 20px);
+    margin-left: 5px;}
+.layui-table-page dl dd{width: 64px}

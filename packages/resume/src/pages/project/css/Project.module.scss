@@ -1,0 +1,35 @@
+.projectCard {
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.linkIcon {
+  margin-right: 16px;
+  font-size: 18px;
+  color: #1890ff;
+}
+
+.featureTag {
+  margin-bottom: 8px;
+}
+
+.project {
+  width: 60%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  :global {
+    .ant-typography {
+
+    }
+    .ant-card {
+      background-color: transparent;
+    }
+  }
+}

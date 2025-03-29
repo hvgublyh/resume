@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "publish": "npm run build && npm publish"
+    "pub": "npm run build && npm publish"
   },
   "devDependencies": {
     "rollup": "^2.79.1",

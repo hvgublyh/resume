@@ -1,6 +1,8 @@
 .home {
     background-color: transparent;
     :global {
-        
+      .ant-card {
+        background-color: transparent;
+      }
     }
 }

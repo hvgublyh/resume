@@ -1,13 +1,16 @@
 import React, { PropsWithChildren } from 'react';
-import { Layout, Menu, Card, Row, Col, Typography, Button } from 'antd';
-import { UserOutlined, HistoryOutlined, CodeOutlined, HomeOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Layout, Menu } from 'antd';
+import { UserOutlined, HomeOutlined, ProjectOutlined, BookOutlined } from '@ant-design/icons';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './css/Layout.module.scss';
+const { Header, Footer } = Layout;
 
-const { Header, Content, Footer } = Layout;
-const { Title, Paragraph } = Typography;
-
-const LayoutComponent: React.FC<PropsWithChildren> = ({ children }) => {
+const LayoutComponent: React.FC<PropsWithChildren> = () => {
+  const location = useLocation();
+  const defaultSelectedKeys = React.useMemo(() => {
+    return [location.pathname || '/home']
+  }, [location.pathname]);
+  const [selectedKeys, setSelectedKeys] = React.useState<string[]>(defaultSelectedKeys);
   return (
     <Layout className={css.layout} style={{ minHeight: '100vh' }}>
       <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', display: 'flex', alignItems: 'center' }}>
@@ -15,33 +18,37 @@ const LayoutComponent: React.FC<PropsWithChildren> = ({ children }) => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={['home']}
+          defaultSelectedKeys={defaultSelectedKeys}
+          selectedKeys={selectedKeys}
+          onClick={(e) => {
+            setSelectedKeys([e.key]);
+          }}
           items={[
             {
-              key: 'home',
+              key: '/home',
               icon: <HomeOutlined />,
-              label: '首页',
+              label: <Link to="/">首页</Link>,
             },
             {
-              key: 'resume',
+              key: '/resume',
               icon: <UserOutlined />,
               label: <Link to="/resume">简历</Link>,
             },
             {
-              key: 'experience',
-              icon: <HistoryOutlined />,
-              label: <Link to="#">个人经历</Link>,
+              key: '/project',
+              icon: <ProjectOutlined />,
+              label: <Link to="/project">私人项目</Link>,
             },
             {
-              key: 'tech',
-              icon: <CodeOutlined />,
-              label: <Link to="#">技术栈</Link>,
+              key: '/notebook',
+              icon: <BookOutlined />,
+              label: <Link to="/notebook">笔记</Link>,
             },
           ]}
         />
       </Header>
-      {children}
-      <Footer style={{ textAlign: 'center' }}>
+      <Outlet />
+      <Footer style={{ textAlign: 'center' }} >
         个人博客 ©{new Date().getFullYear()} Created by hvgublyh
       </Footer>
     </Layout>

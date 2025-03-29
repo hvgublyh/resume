@@ -1,0 +1,13 @@
+    function fNewArray(args,newArgs) {
+        let _args = newArgs||[];
+        for(let item of args){
+            if(typeof item === 'object'){
+                fNewArray.call(this,item,_args)
+            }else {
+                _args.push(item);
+            }
+        }
+        return _args;
+    }
+
+console.log(fNewArray([1,2,4,[1,2]]))
