@@ -12,6 +12,12 @@ const Note: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
+  const selecteCategory = (category: MarkdownCategory) => {
+    setSelectedCategory(category);
+    setSelectedFile(category.children[0]);
+    setActiveIndex(markdownFiles.findIndex((item) => item.name === category.name));
+  }
+
   // Function to fetch all markdown files
   useEffect(() => {
     const fetchMarkdownFiles = async () => {
@@ -54,15 +60,6 @@ const Note: React.FC = () => {
     fetchMarkdownFiles();
   }, []);
 
-  // 选中的目录变化时，获取index
-  useEffect(() => {
-    if (selectedCategory) {
-      const index = markdownFiles.findIndex((category) => category.name === selectedCategory.name);
-      setActiveIndex(index);
-    }
-  }, [selectedCategory, markdownFiles]);
-
-
   if (loading && markdownFiles.length === 0) {
     return <div>Loading markdown files...</div>;
   }
@@ -82,7 +79,7 @@ const Note: React.FC = () => {
                 key={category.name}
                 className={"category-item  " + (selectedCategory?.name === category.name ? 'active' : '')}
                 style={{ 'backgroundColor': colors[index % colors.length] }}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => selecteCategory(category)}
               >
                 {category.name}
               </li>

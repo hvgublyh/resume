@@ -37,12 +37,12 @@ const LayoutComponent: React.FC<PropsWithChildren> = () => {
             {
               key: '/project',
               icon: <ProjectOutlined />,
-              label: <Link to="/project">私人项目</Link>,
+              label: <Link to="/project">个人项目</Link>,
             },
             {
               key: '/notebook',
               icon: <BookOutlined />,
-              label: <Link to="/notebook">笔记</Link>,
+              label: <Link to="/notebook">个人笔记</Link>,
             },
           ]}
         />

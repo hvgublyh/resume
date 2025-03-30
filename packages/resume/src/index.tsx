@@ -1,5 +1,5 @@
 import './util/rem'
-import 'antd/dist/antd.css';
+import 'antd/dist/reset.css';
 import './index.css';
 
 import React from 'react';
@@ -17,13 +17,17 @@ import { Provider } from 'react-redux'
 import { store } from './redux/store';
 import Project from './pages/project/Project';
 import Note from './pages/note/Note';
-
+import { px2remTransformer, StyleProvider } from '@ant-design/cssinjs';
+const px2rem = px2remTransformer({
+  rootValue: 16, // 32px = 1rem; @default 16
+});
 
 // Redirect component to ensure application starts with /resume path
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
+  <StyleProvider transformers={[px2rem]}>
     <React.StrictMode>
       <Provider store={store} >
         <HashRouter>
@@ -46,8 +50,10 @@ root.render(
           </Routes>
         </HashRouter>
       </Provider>
-
     </React.StrictMode>
+  </StyleProvider>
+
+
 );
 
 // If you want to start measuring performance in your app, pass a function

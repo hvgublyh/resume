@@ -1,5 +1,17 @@
 # @resume/resume
 
+## 3.0.1
+
+### Patch Changes
+
+- cssinjs 配置主题转换 px 为 rem
+
+## 3.0.0
+
+### Major Changes
+
+- 添加笔记和项目页
+
 ## 2.0.0
 
 ### Major Changes

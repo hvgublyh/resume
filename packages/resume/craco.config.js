@@ -24,7 +24,9 @@ module.exports = {
           use: 'raw-loader',
         });
       }
-   
+      // 处理css
+      // 找到 css 规则
+      console.log(JSON.stringify(oneOfRule));
       return webpackConfig;
     },
   },
@@ -33,26 +35,8 @@ module.exports = {
   },
    style: {
     postcss: {
-      mode: 'extends',
-      loaderOptions: {
-        postcssOptions: {
-          ident: 'postcss',
-          plugins: [
-            [
-              'postcss-pxtorem',
-              {
-                rootValue: 16, // 根元素字体大小
-                // propList: ['width', 'height']
-                propList: ['*'],
-                // 排除类
-                selectorBlackList: [
-                  'no-rem',        // 排除包含.no-rem类的元素
-                ],
-              },
-            ],
-          ],
-        },
-      },
+      mode: 'file' // 使用外部的postcss.config.js文件
     },
   },
+  
 }

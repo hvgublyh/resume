@@ -31,11 +31,11 @@ const Home: React.FC = () => {
           </Col>
           <Col xs={24} sm={8}>
             <Card
-              title="私人项目"
+              title="个人项目"
               hoverable
               cover={<div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ProjectOutlined style={{ fontSize: 64 }} /></div>}
             >
-              <Card.Meta description="了解我的私人项目" />
+              <Card.Meta description="了解我的个人项目" />
               <Button type="primary" style={{ marginTop: 16 }}>
                 <Link to="/project">查看项目</Link>
               </Button>
@@ -43,7 +43,7 @@ const Home: React.FC = () => {
           </Col>
           <Col xs={24} sm={8}>
             <Card
-              title="笔记"
+              title="个人笔记"
               hoverable
               cover={<div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><BookOutlined style={{ fontSize: 64 }} /></div>}
             >
