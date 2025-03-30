@@ -8,7 +8,9 @@ const { Header, Footer } = Layout;
 const LayoutComponent: React.FC<PropsWithChildren> = () => {
   const location = useLocation();
   const defaultSelectedKeys = React.useMemo(() => {
-    return [location.pathname || '/home']
+    let path = location.pathname.split('/')[1];
+    path = path === '' ? '/home' : `/${path}`;
+    return [path]
   }, [location.pathname]);
   const [selectedKeys, setSelectedKeys] = React.useState<string[]>(defaultSelectedKeys);
   return (
@@ -27,7 +29,7 @@ const LayoutComponent: React.FC<PropsWithChildren> = () => {
             {
               key: '/home',
               icon: <HomeOutlined />,
-              label: <Link to="/">首页</Link>,
+              label: <Link to="/home">首页</Link>,
             },
             {
               key: '/resume',
