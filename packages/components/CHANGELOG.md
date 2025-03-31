@@ -1,5 +1,11 @@
 # @resume/components
 
+## 1.1.0
+
+### Minor Changes
+
+- 删除多余笔记
+
 ## 1.0.0
 
 ## 1.0.0-beta.2

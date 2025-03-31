@@ -1,5 +1,11 @@
 # @resume/resume
 
+## 3.1.0
+
+### Minor Changes
+
+- 删除多余笔记
+
 ## 3.0.1
 
 ### Patch Changes
