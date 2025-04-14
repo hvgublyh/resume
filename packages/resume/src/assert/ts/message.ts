@@ -37,7 +37,7 @@ const message = {
     {
       "startTime": "2021.08",
       "endTime": "2025.03",
-      "company": "思特奇",
+      "company": "大奇数据/思特奇",
       "position": "前端工程师",
       "project": [
         {

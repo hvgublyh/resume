@@ -1,6 +1,6 @@
 {
   "name": "@resume/resume",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "private": true,
   "homepage": ".",
   "dependencies": {
@@ -32,7 +32,8 @@
     "pub": "pub.sh",
     "build": "craco  build",
     "test": "craco  test",
-    "eject": "craco  eject"
+    "eject": "craco  eject",
+    "installDev": "node ./scripts/install.js"
   },
   "eslintConfig": {
     "extends": [

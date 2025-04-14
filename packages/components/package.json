@@ -1,6 +1,6 @@
 {
   "name": "@resume/components",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Resume UI components",
   "author": "Cedric van Putten <me@bycedric.com>",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "lint": "eslint --ext js,ts,tsx .",
     "test": "jest",
     "build": "rollup -c",
-    "pub": "npm run build && npm publish --registry http://localhost:4873"
+    "pub": "npm run build && npm publish --registry http://localhost:4873",
+    "installDev": "node ./scripts/install.js"
   },
   "devDependencies": {
     "@testing-library/react-native": "^12.9.0",

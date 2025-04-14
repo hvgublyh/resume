@@ -14,7 +14,7 @@ export interface MarkdownFile {
 }
 
 // 使用 require.context 来获取指定目录下的所有 markdown 文件
-const markdownFiles = require.context('../markdown', true, /\.md$/);
+const markdownFiles = require.context('/public/markdown', true, /\.md$/);
 
 export const getMarkdownFiles = async () => {
   const files: Array<MarkdownFile> = [];
@@ -22,9 +22,9 @@ export const getMarkdownFiles = async () => {
   // 遍历获取到的文件
   markdownFiles.keys().forEach((filename: string) => {
     const p = new Promise(async (resolve) => {
-      const file = markdownFiles(filename);
+      const file = await getMarkdownContent(filename);
       const name = filename.replace('./', '').replace('.md', '');
-      const content = file.default || file;
+      const content = file;
       const renderContent = await renderMarkdown(content);
       files.push({ name, path: filename, content, renderContent });
       resolve(true);
@@ -36,9 +36,14 @@ export const getMarkdownFiles = async () => {
   return files;
 };
 
-export const getMarkdownContent = (filename: string) => {
-  // 获取markdown文件的内容
-  const content = markdownFiles(filename);
+export const getMarkdownContent = async (filename: string) => {
+  // 获取markdown文件的内容, 使用fetch请求
+  const filePath = markdownFiles(filename);
+  const response = await fetch(filePath, { method: 'GET' });
+  if (!response.ok) {
+    throw new Error(`Failed to fetch markdown file: ${filename}`);
+  }
+  const content = await response.text();
   return content;
 }
 

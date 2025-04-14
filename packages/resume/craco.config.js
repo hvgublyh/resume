@@ -11,19 +11,19 @@ module.exports = {
       // 找到 oneOf 规则
       const oneOfRule = webpackConfig.module.rules.find((rule) => rule.oneOf);
 
-      if (oneOfRule) {
-        // 在 oneOf 中添加对 .md 文件的处理规则
-        oneOfRule.oneOf.unshift({
-          test: /\.md$/,
-          use: 'raw-loader',
-        });
-      } else {
-        // 如果没有 oneOf，直接添加到 rules
-        webpackConfig.module.rules.unshift({
-          test: /\.md$/,
-          use: 'raw-loader',
-        });
-      }
+      // if (oneOfRule) {
+      //   // 在 oneOf 中添加对 .md 文件的处理规则
+      //   oneOfRule.oneOf.unshift({
+      //     test: /\.md$/,
+      //     use: 'raw-loader',
+      //   });
+      // } else {
+      //   // 如果没有 oneOf，直接添加到 rules
+      //   webpackConfig.module.rules.unshift({
+      //     test: /\.md$/,
+      //     use: 'raw-loader',
+      //   });
+      // }
       // 处理css
       // 找到 css 规则
       console.log(JSON.stringify(oneOfRule));

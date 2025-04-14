@@ -1,5 +1,11 @@
 # @resume/resume
 
+## 3.2.0
+
+### Minor Changes
+
+- 子项目添加 installDev 命令
+
 ## 3.1.0
 
 ### Minor Changes

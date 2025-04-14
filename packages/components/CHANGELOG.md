@@ -1,5 +1,11 @@
 # @resume/components
 
+## 1.2.0
+
+### Minor Changes
+
+- 子项目添加 installDev 命令
+
 ## 1.1.0
 
 ### Minor Changes
