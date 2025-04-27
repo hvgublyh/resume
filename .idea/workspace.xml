@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35201eeb-3bbb-4a7e-bee5-59880ee5288d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/commitizen-交互图.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/husky校验.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/Card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/Card/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/components/SiButton/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/SiButton/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/src/components/SiButton/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/src/components/SiButton/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/craco.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/assert/ts/MessageType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/assert/ts/MessageType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/assert/ts/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/assert/ts/message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/assert/ts/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/assert/ts/project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/assert/ts/projectType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/assert/ts/projectType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/components/selfTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/components/selfTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/context/page1Context.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/context/page1Context.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/cv/Cv.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/cv/Cv.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Education.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Education.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Experience.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Skill.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/cv/component/Skill.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/demo/page1.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/demo/page2.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/demo/subpage/page1A.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/demo/subpage/page2A.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/note/Note.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/note/Note.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/note/api/markdown-content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/note/api/markdown-content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/pages/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/src/pages/project/Project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/redux/TypeStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/redux/stateReducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/redux/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/src/util/rem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/resume/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/resume/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.root.json" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="228" />
+    <option name="y" value="30" />
+    <option name="width" value="2100" />
+    <option name="height" value="1290" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="resume" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35201eeb-3bbb-4a7e-bee5-59880ee5288d" name="Default Changelist" comment="" />
+      <created>1745613623193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745613623193</updated>
+      <workItem from="1745613626547" duration="84000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="84000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.249549" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49969932" visible="true" weight="0.5877958" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50030065" side_tool="true" visible="true" weight="0.5877958" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

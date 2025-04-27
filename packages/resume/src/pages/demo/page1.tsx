@@ -14,10 +14,10 @@ export default function Page1() {
   const navigate = useNavigate()
   const goPage2 = () => {
     setClickState({ num: clickState.num + 1 })
-    // if (clickState.num < 3) {
-    //   messageApi.info(`当前点击次数为${clickState.num}`);
-    //   return
-    // }
+    if (clickState.num < 3) {
+      messageApi.info(`当前点击次数为${clickState.num}`);
+      return
+    }
     // navigate('/page2') // navigate to page2
     // navigate(-1) // back navigation
     // navigate(1) // forward navigation

@@ -1,12 +1,12 @@
-import {createContext} from 'react';
+import { createContext } from "react";
 
-export interface IInfoContext {
+export type IInfoContext = {
+  modifyOrigin?: (origin: string) => void;
   origin: string;
-  modifyOrigin?: (origin:string) => void;
 }
 
 const defaultState = {
-  origin: '',
-}
+  origin: "",
+};
 
-export const InfoContext = createContext<IInfoContext>(defaultState)
+export const InfoContext = createContext<IInfoContext>(defaultState);

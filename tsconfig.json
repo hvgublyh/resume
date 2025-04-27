@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    // 决定如何处理模块
+    "moduleResolution": "node",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@resume/components": [
+        "packages/components/src"
+      ],
+      "@resume/utils": [
+        "packages/utils/src"
+      ],
+      "@resume/resume": [
+        "packages/resume/src"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "noEmit": true
+  },
+  "include": [
+    "packages/**/src",
+    "packages/**/.config.js",
+    "packages/**/typings.d.ts",
+    "*.config.js",
+    "*.config.mjs",
+    "*.d.ts"
+  ],
+}

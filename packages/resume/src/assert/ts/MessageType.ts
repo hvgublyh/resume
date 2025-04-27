@@ -1,33 +1,33 @@
-export interface TypeExperience {
-  startTime: string;
-  endTime: string;
-  company: string;
-  position: string;
-  project: TypeProject[];
-}
-
-export interface TypeProject {
-  name: string;
-  tech: string[];
-  introduce: string;
-  duty: string;
-}
-
-export interface TypeEducation {
-  startTime: string;
+export type TypeEducation = {
   endTime: string;
   school: string;
+  startTime: string;
 }
 
-export interface TypeHeader {
-  name: string;
+export type TypeExperience = {
+  company: string;
+  endTime: string;
+  position: string;
+  project: TypeProject[];
+  startTime: string;
+}
+
+export type TypeHeader = {
   messages: string[];
+  name: string;
 }
 
-export interface TypeMessage {
-  header: TypeHeader;
+export type TypeMessage = {
   educations: TypeEducation[];
-  skills: string[];
   experiences: TypeExperience[];
+  header: TypeHeader;
+  skills: string[];
+}
+
+export type TypeProject = {
+  duty: string;
+  introduce: string;
+  name: string;
+  tech: string[];
 }
 

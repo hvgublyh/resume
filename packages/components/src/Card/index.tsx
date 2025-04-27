@@ -1,24 +1,25 @@
-import React from 'react';
 import { Card as AntCard } from 'antd';
 
-export interface CardProps {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-  onClick?: () => void;
+export type CardProps = {
+  readonly description: string;
+  readonly icon?: React.ReactNode;
+  readonly onClick?: () => void;
+  readonly title: string;
 }
-
-const Card: React.FC<CardProps> = ({ title, description, icon, onClick }) => {
+const defaultHandler = () => {
+  console.log('default handler');
+}
+function Card({ description, icon = "", onClick = defaultHandler, title }: CardProps) {
   return (
     <AntCard
-      title={title}
-      hoverable
-      onClick={onClick}
       cover={
-        <div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ alignItems: 'center', background: '#f0f2f5', display: 'flex', height: 140, justifyContent: 'center' }}>
           {icon}
         </div>
       }
+      hoverable
+      onClick={onClick}
+      title={title}
     >
       <AntCard.Meta description={description} />
     </AntCard>

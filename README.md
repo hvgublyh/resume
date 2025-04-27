@@ -1,8 +1,3 @@
-# pnpm + workspace 构建你的 monorepo 工程
-
-## 欢迎关注我的公众号
-![微信logo](https://github.com/astonishqft/pnpm-monorepo-demo/assets/15138753/87dc79ca-da1b-4a74-80bb-5bd12765ef11)
-
 ## 什么是monorepo？
 
 什么是 monorepo？以及和 multirepo 的区别是什么?
@@ -599,9 +594,3 @@ package.json 中增加如下配置:
 $ npx husky add .husky/pre-commit "npx --no-install lint-staged"
 ```
 
-[示例代码](https://github.com/astonishqft/pnpm-monorepo-demo)
-
-## 参考链接
-
-- [用 PNPM Workspaces 替换 Lerna + Yarn](https://juejin.cn/post/7071992448511279141)
-- [monorepo工作流基础之changesets打开与进阶](https://blog.csdn.net/qq_21567385/article/details/122361591)

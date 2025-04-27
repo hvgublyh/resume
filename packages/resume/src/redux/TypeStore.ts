@@ -1,5 +1,5 @@
 import { TypeState } from "./stateReducer";
 
-export interface TypeStore {
+export type TypeStore = {
   userState: TypeState;
 }

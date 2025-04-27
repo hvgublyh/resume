@@ -1,54 +1,55 @@
-import React from 'react';
-import { Layout, Card, Row, Col, Typography, Button } from 'antd';
-import { UserOutlined,  ProjectOutlined, BookOutlined } from '@ant-design/icons';
+import { BookOutlined, ProjectOutlined, UserOutlined } from '@ant-design/icons';
+import { Button, Card, Col, Layout, Row, Typography } from 'antd';
 import { Link } from 'react-router-dom';
+
 import css from './css/Home.module.scss';
 
 const { Content } = Layout;
-const { Title, Paragraph } = Typography;
+const { Paragraph, Title } = Typography;
 
-const Home: React.FC = () => {
+const gutter_cards = 16;
+function Home() {
   return (
-    <Content style={{ padding: '0 50px', marginTop: 20 }} className={css.home}>
-      <div className="site-layout-content" style={{ padding: 24, minHeight: 380 }}>
+    <Content className={css.home} style={{ marginTop: 20, padding: '0 50px' }}>
+      <div className="site-layout-content" style={{ minHeight: 380, padding: 24 }}>
         <Title level={2}>个人博客</Title>
         <Paragraph>
           欢迎访问我的个人博客！在这里，您可以了解我的职业经历、技术能力和项目成果。
         </Paragraph>
 
-        <Row gutter={[16, 16]} style={{ marginTop: 30 }}>
-          <Col xs={24} sm={8}>
+        <Row gutter={[gutter_cards, gutter_cards]} style={{ marginTop: 30 }}>
+          <Col sm={8} xs={24}>
             <Card
-              title="我的简历"
+              cover={<div style={{ alignItems: 'center', background: '#f0f2f5', display: 'flex', height: 140, justifyContent: 'center' }}><UserOutlined style={{ fontSize: 64 }} /></div>}
               hoverable
-              cover={<div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><UserOutlined style={{ fontSize: 64 }} /></div>}
+              title="我的简历"
             >
               <Card.Meta description="查看我的专业简历和职业技能" />
-              <Button type="primary" style={{ marginTop: 16 }}>
+              <Button style={{ marginTop: 16 }} type="primary">
                 <Link to="/resume">查看简历</Link>
               </Button>
             </Card>
           </Col>
-          <Col xs={24} sm={8}>
+          <Col sm={8} xs={24}>
             <Card
-              title="个人项目"
+              cover={<div style={{ alignItems: 'center', background: '#f0f2f5', display: 'flex', height: 140, justifyContent: 'center' }}><ProjectOutlined style={{ fontSize: 64 }} /></div>}
               hoverable
-              cover={<div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><ProjectOutlined style={{ fontSize: 64 }} /></div>}
+              title="个人项目"
             >
               <Card.Meta description="了解我的个人项目" />
-              <Button type="primary" style={{ marginTop: 16 }}>
+              <Button style={{ marginTop: 16 }} type="primary">
                 <Link to="/project">查看项目</Link>
               </Button>
             </Card>
           </Col>
-          <Col xs={24} sm={8}>
+          <Col sm={8} xs={24}>
             <Card
-              title="个人笔记"
+              cover={<div style={{ alignItems: 'center', background: '#f0f2f5', display: 'flex', height: 140, justifyContent: 'center' }}><BookOutlined style={{ fontSize: 64 }} /></div>}
               hoverable
-              cover={<div style={{ height: 140, background: '#f0f2f5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><BookOutlined style={{ fontSize: 64 }} /></div>}
+              title="个人笔记"
             >
               <Card.Meta description="好记性不如烂笔头" />
-              <Button type="primary" style={{ marginTop: 16 }}>
+              <Button style={{ marginTop: 16 }} type="primary">
                 <Link to="/notebook">查看笔记</Link>
               </Button>
             </Card>

@@ -1,59 +1,60 @@
-import './util/rem'
-import 'antd/dist/reset.css';
-import './index.css';
+import "./utils/rem";
+import "antd/dist/reset.css";
+import "./index.css";
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 // import './assert/css/tailwind.css'
-import CV from './pages/cv/Cv'
-import Page1 from './pages/demo/page1'
-import Page2 from './pages/demo/page2'
-import Page1A from './pages/demo/subpage/page1A';
-import Home from './pages/home/Home';
-import Layout from './pages/layout/Layout';
-import reportWebVitals from './reportWebVitals';
-import { Route, Routes, HashRouter, Navigate } from "react-router-dom"
-import { Provider } from 'react-redux'
-import { store } from './redux/store';
-import Project from './pages/project/Project';
-import Note from './pages/note/Note';
-import { px2remTransformer, StyleProvider } from '@ant-design/cssinjs';
+import { px2remTransformer, StyleProvider } from "@ant-design/cssinjs";
+import { Provider } from "react-redux";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+
+import Cv from "./pages/cv/Cv";
+import NavigationOrigin from "./pages/demo/NavigationOrigin";
+import NavigationTarget from "./pages/demo/NavigationTarget";
+import SubPage from "./pages/demo/subpage/SubPage";
+import Home from "./pages/home/Home";
+import Layout from "./pages/layout/Layout";
+import Note from "./pages/note/Note";
+import Project from "./pages/project/Project";
+import { store } from "./redux/store";
+import reportWebVitals from "./reportWebVitals";
 const px2rem = px2remTransformer({
   rootValue: 16, // 32px = 1rem; @default 16
 });
 
 // Redirect component to ensure application starts with /resume path
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const rootElement = document.querySelector("#root");
+if (!rootElement) {
+  throw new Error("Root element not found");
+}
+const root = createRoot(rootElement);
 root.render(
   <StyleProvider transformers={[px2rem]}>
-    <React.StrictMode>
-      <Provider store={store} >
+    <StrictMode>
+      <Provider store={store}>
         <HashRouter>
           <Routes>
-            <Route path="/resume" element={<CV />} />
-            <Route path="/page1" element={<Page1 />} >
-              <Route path="Page1A" element={<Page1A />} />
+            <Route element={<Cv />} path="/resume" />
+            <Route element={<NavigationOrigin />} path="/origin">
+              <Route element={<SubPage />} path="subPage" />
             </Route>
-            <Route path="/page2" element={<Page2 />} />
-            <Route path="/" element={<Layout />} >
-              <Route path="home" element={<Home />} />
-              <Route path="project" element={<Project />} />
-              <Route path="notebook" element={<Note />} />
+            <Route element={<NavigationTarget />} path="/target" />
+            <Route element={<Layout />} path="/">
+              <Route element={<Home />} path="home" />
+              <Route element={<Project />} path="project" />
+              <Route element={<Note />} path="notebook" />
               {/* Redirect from root to /home */}
-              <Route path="/" element={<Navigate to="/home" replace />} />
-              <Route path="*" element={<Navigate to="/home" replace />} />
-            </ Route>
+              <Route element={<Navigate replace to="/home" />} path="/" />
+              <Route element={<Navigate replace to="/home" />} path="*" />
+            </Route>
             {/* Add a catch-all redirect to handle any unmatched routes */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route element={<Navigate replace to="/" />} path="*" />
           </Routes>
         </HashRouter>
       </Provider>
-    </React.StrictMode>
-  </StyleProvider>
-
-
+    </StrictMode>
+  </StyleProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function

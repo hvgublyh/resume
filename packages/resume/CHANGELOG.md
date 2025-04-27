@@ -1,5 +1,17 @@
 # @resume/resume
 
+## 5.0.0
+
+### Major Changes
+
+- typescript修改
+
+## 4.0.0
+
+### Major Changes
+
+- typescript修改
+
 ## 3.2.0
 
 ### Minor Changes

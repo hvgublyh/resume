@@ -1,61 +1,64 @@
-import { Table } from 'antd';
 import type { ColumnsType } from 'antd/lib/table';
-import React from 'react';
 
-interface DataType {
-  key: React.Key;
-  name: string;
-  age: number;
+import { Table } from 'antd';
+import { Key } from 'react';
+
+type DataType = {
   address: string;
+  age: number;
+  key: Key;
+  name: string;
 }
 
 const columns: ColumnsType<DataType> = [
   {
+    dataIndex: 'name',
+    fixed: 'left',
+    key: 'name',
     title: 'Full Name',
     width: 100,
-    dataIndex: 'name',
-    key: 'name',
-    fixed: 'left',
   },
   {
+    dataIndex: 'age',
+    fixed: 'left',
+    key: 'age',
     title: 'Age',
     width: 100,
-    dataIndex: 'age',
-    key: 'age',
-    fixed: 'left',
   },
-  { title: 'Column 1', dataIndex: 'address', key: '1' },
-  { title: 'Column 2', dataIndex: 'address', key: '2' },
-  { title: 'Column 3', dataIndex: 'address', key: '3' },
-  { title: 'Column 4', dataIndex: 'address', key: '4' },
-  { title: 'Column 5', dataIndex: 'address', key: '5' },
-  { title: 'Column 6', dataIndex: 'address', key: '6' },
-  { title: 'Column 7', dataIndex: 'address', key: '7' },
-  { title: 'Column 8', dataIndex: 'address', key: '8' },
+  { dataIndex: 'address', key: '1', title: 'Column 1' },
+  { dataIndex: 'address', key: '2', title: 'Column 2' },
+  { dataIndex: 'address', key: '3', title: 'Column 3' },
+  { dataIndex: 'address', key: '4', title: 'Column 4' },
+  { dataIndex: 'address', key: '5', title: 'Column 5' },
+  { dataIndex: 'address', key: '6', title: 'Column 6' },
+  { dataIndex: 'address', key: '7', title: 'Column 7' },
+  { dataIndex: 'address', key: '8', title: 'Column 8' },
   {
-    title: 'Action',
-    key: 'operation',
     fixed: 'right',
-    width: 100,
+    key: 'operation',
     render: () => <a>action</a>,
+    title: 'Action',
+    width: 100,
   },
 ];
 
 const data: DataType[] = [
   {
+    address: 'New York Park',
+    age: 32,
     key: '1',
     name: 'John Brown',
-    age: 32,
-    address: 'New York Park',
   },
   {
+    address: 'London Park',
+    age: 40,
     key: '2',
     name: 'Jim Green',
-    age: 40,
-    address: 'London Park',
   },
 ];
 
-const SelfTable: React.FC = () => <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} />;
+function SelfTable() {
+  return (<Table columns={columns} dataSource={data} scroll={{ x: 1300 }} />);
+};
 
 export default SelfTable;

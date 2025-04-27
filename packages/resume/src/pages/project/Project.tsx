@@ -1,34 +1,30 @@
-import React from 'react';
-import { Card, Row, Col, Typography, Tag } from 'antd';
-import { GithubOutlined, GlobalOutlined } from '@ant-design/icons';
-import styles from './css/Project.module.scss';
 import projects from '@/assert/ts/project';
+import { GithubOutlined, GlobalOutlined } from '@ant-design/icons';
+import { Card, Col, Row, Tag, Typography } from 'antd';
 
-const { Title, Paragraph } = Typography;
+import styles from './css/Project.module.scss';
+
+const { Paragraph, Title } = Typography;
 
 
 
-const Project: React.FC = () => {
+function Project()  {
   return (
     <div className={styles.project}>
 
       {projects.map((project) => (
-        <Card key={project.id} className={styles.projectCard}>
+        <Card className={styles.projectCard} key={project.id}>
           <Row gutter={16}>
-            <Col xs={24} md={24}>
+            <Col md={24} xs={24}>
               <Title level={3}>{project.name}</Title>
 
               <div style={{ marginBottom: 16 }}>
-                {project.repoUrl && (
-                  <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                {project.repoUrl ? <a className={styles.linkIcon} href={project.repoUrl} rel="noopener noreferrer" target="_blank">
                     <GithubOutlined /> 源代码
-                  </a>
-                )}
-                {project.demoUrl && (
-                  <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className={styles.linkIcon}>
+                  </a> : undefined}
+                {project.demoUrl ? <a className={styles.linkIcon} href={project.demoUrl} rel="noopener noreferrer" target="_blank">
                     <GlobalOutlined /> 在线演示
-                  </a>
-                )}
+                  </a> : undefined}
               </div>
 
               <Paragraph>{project.description}</Paragraph>
@@ -36,8 +32,8 @@ const Project: React.FC = () => {
               <div>
                 <Title level={4}>功能特点</Title>
                 <div>
-                  {project.features.map((feature, index) => (
-                    <Tag key={index} color="blue" className={styles.featureTag}>{feature}</Tag>
+                  {project.features.map((feature) => (
+                    <Tag className={styles.featureTag} color="blue" key={feature}>{feature}</Tag>
                   ))}
                 </div>
               </div>
@@ -45,8 +41,8 @@ const Project: React.FC = () => {
               <div style={{ marginTop: 16 }}>
                 <Title level={4}>成就</Title>
                 <ul>
-                  {project.achievements.map((achievement, index) => (
-                    <li key={index}>{achievement}</li>
+                  {project.achievements.map((achievement) => (
+                    <li key={achievement}>{achievement}</li>
                   ))}
                 </ul>
               </div>

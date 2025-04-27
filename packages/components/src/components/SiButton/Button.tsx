@@ -1,18 +1,21 @@
 import { Button } from 'antd';
-import React, { useState } from 'react';
+import { ReactNode, useState, } from 'react';
 
-interface SiButtonProps {
-  children?: React.ReactNode;
-  onClick?: () => void;
+type SiButtonProps = {
+  readonly children?: ReactNode;
+  readonly onClick?: () => void;
+}
+const defaultHandler = () => {
+  console.log('default handler');
 }
 
-const SiButton: React.FC<SiButtonProps> = ({ children, onClick }) => {
-  const [num, setNum] = useState<number>(0);
+function SiButton({ children = undefined, onClick = defaultHandler }: SiButtonProps) {
+  const [number, setNumber] = useState<number>(0);
   const handleClick = () => {
-    setNum(num + 1);
-    onClick?.();
+    setNumber(number + 1);
+    onClick();
   };
-  return (<Button onClick={handleClick}>{num}{children}</Button>);
+  return (<Button onClick={handleClick}>{number}{children}</Button>);
 };
 
 export default SiButton;

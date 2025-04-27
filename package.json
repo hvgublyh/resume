@@ -1,5 +1,6 @@
 {
   "name": "resume-monorepo",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -16,15 +17,15 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "lint": "eslint --ext .ts,.tsx packages/"
   },
   "engines": {
     "node": ">=14.19.0"
   },
   "lint-staged": {
     "*.ts": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "config": {
@@ -36,20 +37,40 @@
     "@changesets/cli": "^2.22.0",
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.24.0",
-    "@typescript-eslint/parser": "^5.24.0",
+    "@eslint/js": "^9.25.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.39",
+    "@types/react": "^18.3.20",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-test-renderer": "^19.0.0",
+    "@types/webpack": "^5.28.5",
+    "@typescript-eslint/parser": "^8.29.0",
     "axios": "^0.27.2",
     "commitizen": "^4.2.4",
+    "concurrently": "^8.0.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.15.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.3.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-perfectionist": "^4.11.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.2",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-testing-library": "^7.1.1",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "eslint-webpack-plugin": "^5.0.1",
     "father-build": "^1.22.1",
+    "globals": "^16.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.6.4",
-    "concurrently": "^8.0.0"
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
   },
   "dependencies": {
-    "antd": "^5.24.3"
+    "antd": "^5.24.3",
+    "react-script": "^2.0.5"
   }
 }

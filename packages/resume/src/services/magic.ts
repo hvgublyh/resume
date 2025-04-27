@@ -1,0 +1,1 @@
+export const KEY_SUCCESS = 200;

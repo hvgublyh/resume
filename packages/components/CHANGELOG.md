@@ -1,5 +1,17 @@
 # @resume/components
 
+## 3.0.0
+
+### Major Changes
+
+- typescript修改
+
+## 2.0.0
+
+### Major Changes
+
+- typescript修改
+
 ## 1.2.0
 
 ### Minor Changes

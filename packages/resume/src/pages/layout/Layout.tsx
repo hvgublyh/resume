@@ -1,56 +1,74 @@
-import React, { PropsWithChildren } from 'react';
-import { Layout, Menu } from 'antd';
-import { UserOutlined, HomeOutlined, ProjectOutlined, BookOutlined } from '@ant-design/icons';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import css from './css/Layout.module.scss';
-const { Header, Footer } = Layout;
+import {
+  BookOutlined,
+  HomeOutlined,
+  ProjectOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
+import { Layout, Menu } from "antd";
+import { useState, useMemo } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
-const LayoutComponent: React.FC<PropsWithChildren> = () => {
+import css from "./css/Layout.module.scss";
+const { Footer, Header } = Layout;
+
+function LayoutComponent() {
   const location = useLocation();
-  const defaultSelectedKeys = React.useMemo(() => {
-    let path = location.pathname.split('/')[1];
-    path = path === '' ? '/home' : `/${path}`;
-    return [path]
+  const defaultSelectedKeys = useMemo(() => {
+    let path = location.pathname.split("/")[1];
+    path = path === "" ? "/home" : `/${path}`;
+    return [path];
   }, [location.pathname]);
-  const [selectedKeys, setSelectedKeys] = React.useState<string[]>(defaultSelectedKeys);
+
+  const [selectedKeys, setSelectedKeys] =
+    useState<string[]>(defaultSelectedKeys);
+    
   return (
-    <Layout className={css.layout} style={{ minHeight: '100vh' }}>
-      <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', display: 'flex', alignItems: 'center' }}>
+    <Layout className={css.layout} style={{ minHeight: "100vh" }}>
+      <Header
+        style={{
+          alignItems: "center",
+          display: "flex",
+          position: "sticky",
+          top: 0,
+          width: "100%",
+          zIndex: 1,
+        }}
+      >
         <div className="logo" />
         <Menu
-          theme="dark"
-          mode="horizontal"
           defaultSelectedKeys={defaultSelectedKeys}
-          selectedKeys={selectedKeys}
-          onClick={(e) => {
-            setSelectedKeys([e.key]);
-          }}
           items={[
             {
-              key: '/home',
               icon: <HomeOutlined />,
+              key: "/home",
               label: <Link to="/home">首页</Link>,
             },
             {
-              key: '/resume',
               icon: <UserOutlined />,
+              key: "/resume",
               label: <Link to="/resume">简历</Link>,
             },
             {
-              key: '/project',
               icon: <ProjectOutlined />,
+              key: "/project",
               label: <Link to="/project">个人项目</Link>,
             },
             {
-              key: '/notebook',
               icon: <BookOutlined />,
+              key: "/notebook",
               label: <Link to="/notebook">个人笔记</Link>,
             },
           ]}
+          mode="horizontal"
+          onClick={(event) => {
+            setSelectedKeys([event.key]);
+          }}
+          selectedKeys={selectedKeys}
+          theme="dark"
         />
       </Header>
       <Outlet />
-      <Footer style={{ textAlign: 'center' }} >
+      <Footer style={{ textAlign: "center" }}>
         个人博客 ©{new Date().getFullYear()} Created by hvgublyh
       </Footer>
     </Layout>

@@ -1,36 +1,58 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@resume/components": ["../components/src"],
-      "@resume/utils": ["../utils/src"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@resume/components": [
+        "../components/src"
+      ],
+      "@resume/utils": [
+        "../utils/src"
+      ],
+      "@scripts/*": [
+        "./scripts/*"
+      ]
     },
-    "target": "es5",
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    // 若有未使用的局部变量则抛错
+    "noUnusedLocals": true,
+    // 若有未使用的参数则抛错
+    "noUnusedParameters": true,
+    // 给错误和消息设置样式，使用颜色和上下文
+    "pretty": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "ESNext",
     "moduleResolution": "node",
+    "newLine": "lf",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
   "include": [
-    "src", "typings.d.ts"
+    "src/**/*",
+    "types/*"
   ],
   "rules": {
-    "no-implicit-dependencies": ["optional", ["src"]] // 提示地址
+    "no-implicit-dependencies": [
+      "optional",
+      [
+        "src"
+      ]
+    ] // 提示地址
   }
 }
