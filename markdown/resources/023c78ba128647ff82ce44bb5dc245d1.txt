@@ -1,0 +1,15 @@
+    //改写laypage 样式
+    var renderSelect = function () {
+        //重新渲染下拉框
+        $(".layui-laypage-limits select").removeAttr('lay-ignore')[0].setAttribute('lay-filter','page-select');
+        form.render('select');
+        form.on('select(page-select)',function (data) {
+            $(".layui-laypage-limits select").val(data.value);
+            var id = $("table + .layui-table-view")[0].getAttribute("lay-id");
+            table.reload(id,{
+                page:{
+                    limit:data.value
+                }
+            });
+        });
+    }
