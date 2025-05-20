@@ -1,5 +1,11 @@
 # @resume/resume
 
+## 5.0.1
+
+### Patch Changes
+
+- 变更个人技术描述
+
 ## 5.0.0
 
 ### Major Changes

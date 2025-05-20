@@ -94,6 +94,8 @@ const message = {
   },
   skills: [
     "擅长 Vue、React 及其生态系统，如 Element UI、Ant Design 组件库，精通 ECharts 可视化库。",
+    "熟悉 Nuxt ，能够快速搭建服务端渲染的前端应用。",
+    "熟悉 qiankun, 能够快速搭建微前端应用。",
     "熟悉 taro 和 expo managed workflow，能够快速搭建跨平台的移动端应用。",
     "深度掌握 JavaScript 及现代前端技术，包括 ES6+、TypeScript、Webpack、Monorepo 等，并熟悉 低代码开发 领域。",
     "专注前端性能优化、安全性和跨域问题，具备 高效模块化开发 与 组件化设计 能力，能够构建 可扩展、高性能 的前端架构。",
