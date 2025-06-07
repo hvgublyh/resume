@@ -1,4 +1,5 @@
 const path = require("node:path");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 
 const { dealMarkdown, injectFileList } = require("./scripts/craco/file-list.js");
 const middlewares = require("./scripts/craco/middlewares.js");
@@ -32,6 +33,14 @@ module.exports = {
     configure: (webpackConfig) => {
       dealMarkdown(webpackConfig);
       injectFileList(webpackConfig);
+      // 添加webpack-bundle-analyzer
+      webpackConfig.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: "static",
+          openAnalyzer: false,
+          reportFilename: "bundle-report.html",
+        })
+      );
       return webpackConfig;
     },
   },

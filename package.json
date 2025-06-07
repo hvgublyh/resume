@@ -16,8 +16,6 @@
     "clear": "rimraf 'packages/{components,resume}/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "lint": "eslint --ext .ts,.tsx packages/"
   },
   "engines": {

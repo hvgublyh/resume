@@ -1,3 +1,4 @@
+import { Image } from "antd";
 import { useSelector } from 'react-redux'
 
 import img_zhengkj from '../../../assert/images/zhengkj.jpg'
@@ -22,7 +23,11 @@ function Header() {
       </div>
 
       <div className='header_img fr'>
-        <img alt="" src={img_zhengkj} />
+        <Image
+          alt="郑康进"
+          preview={false}
+          src={img_zhengkj}
+        />
       </div>
     </div>
   );

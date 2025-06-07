@@ -1,15 +1,19 @@
+import React from "react";
+
 import Education from "./component/Education";
-import Experience from "./component/Experience";
+const Experience = React.lazy(() => import("./component/Experience"));
+
 import Header from "./component/Header";
 import Skill from "./component/Skill";
-import css from "./css/cv.module.scss"; 
+import css from "./css/cv.module.scss";
+
 
 function CV() {
   return (
     <div className={css.cv}>
       <Header />
-      <section> 
-        <Education /> 
+      <section>
+        <Education />
       </section>
 
       <section>

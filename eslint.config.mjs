@@ -65,7 +65,7 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/consistent-type-definitions': [ERROR, 'type'],
+      '@typescript-eslint/consistent-type-definitions': [0, 'type'],
       '@typescript-eslint/dot-notation': [ERROR, { allowKeywords: true }],
       '@typescript-eslint/no-empty-function': OFF,
       '@typescript-eslint/restrict-template-expressions': OFF,

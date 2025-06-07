@@ -61,6 +61,7 @@
     "postcss-pxtorem": "^6.1.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.80.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
