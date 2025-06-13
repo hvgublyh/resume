@@ -9,7 +9,7 @@ const PUBLIC_PATH = process.env.PUBLIC_PATH || 'public';
 const OUTPUT_PATH = process.env.OUTPUT_PATH || '';
 
 const categoryMap = [
-  { from: PUBLIC_PATH + '/markdown/第一笔记本', key: '__MARKDOWN_LIST_', to: 'file-list.json' }
+  { from: PUBLIC_PATH + '/markdown/notebook', key: '__MARKDOWN_LIST_', to: 'file-list.json' }
 ];
 
 function getAllFiles(originPath, arrayOfFiles = []) {

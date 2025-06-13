@@ -35,9 +35,10 @@ export default tseslint.config(
       globals: {
         __DEV__: 'readonly', // Définit __DEV__ comme une variable globale en lecture seule
         __dirname: 'readonly', // Définit __dirname comme une variable globale en lecture seule
+        console: "readonly",
         module: "readonly",
         process: "readonly",
-        require: "readonly"
+        require: "readonly",
       },
       parserOptions: {
         projectService: true,
@@ -135,6 +136,7 @@ export default tseslint.config(
       'import/namespace': OFF,
       'import/no-duplicates': OFF,
       'import/no-unresolved': OFF,
+      'no-console': [WARN, { allow: ['warn', 'error'] }],
     }
   },
   {

@@ -1,5 +1,11 @@
 # @resume/resume
 
+## 5.1.0
+
+### Minor Changes
+
+- GH-PAGE上md文件展示问题
+
 ## 5.0.1
 
 ### Patch Changes

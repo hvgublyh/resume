@@ -1,8 +1,8 @@
 {
   "name": "@resume/resume",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/resume",
   "dependencies": {
     "@ant-design/cssinjs": "^1.23.0",
     "@ant-design/icons": "^5.0.0",

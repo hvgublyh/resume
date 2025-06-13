@@ -41,6 +41,39 @@ module.exports = {
           reportFilename: "bundle-report.html",
         })
       );
+      // Configure splitChunks
+      // 保留原始配置
+      const originalSplitChunks = webpackConfig.optimization.splitChunks || {};
+
+      // 合并配置而非替换
+      webpackConfig.optimization.splitChunks = {
+        ...originalSplitChunks,
+        // 只修改 cacheGroups，保留其他配置
+        cacheGroups: {
+          ...(originalSplitChunks.cacheGroups || {}),
+          message: {
+            enforce: true,
+            minSize: 0, // 确保即使很小也会被分割
+            name: 'message',
+            priority: 10,
+            test: /[\\/]assert[\\/]ts[\\/]message\.(ts|js)$/,
+          },
+          reactDom: {
+            enforce: true,
+            name: 'react-dom',
+            priority: 20,
+            test: /[\\/]node_modules[\\/].*react-dom[\\/]/,
+          },
+          utils: {
+            enforce: true,
+            minSize: 0, // 确保即使很小也会被分割
+            name: 'utils', // 修改为正确的名称
+            priority: 10,
+            test: /[\\/]utils[\\/].*\.ts$/, // 匹配utils目录下的所有ts文件
+          },
+        }
+      };
+      //返回配置
       return webpackConfig;
     },
   },

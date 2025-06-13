@@ -13,7 +13,7 @@ export type MarkdownFile = {
   renderContent?: { __html: string | TrustedHTML };
 }
 
-const publicPath = process.env.REACT_APP_API_PUBLIC_PATH ?? '';
+const publicPath = process.env.NODE_ENV === 'production' ? 'https://raw.githubusercontent.com/hvgublyh/resume/gh-pages/' : '';
 
 export const getMarkdownFiles = async () => {
   let markdownFiles: MarkdownCategory[] = [];
