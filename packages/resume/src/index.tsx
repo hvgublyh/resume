@@ -13,6 +13,8 @@ const Cv = lazy(() => import('./pages/cv/Cv'));
 const Note = lazy(() => import('./pages/note/Note'));
 const Project = lazy(() => import('./pages/project/Project'));
 
+import { ThemeProvider } from "styled-components";
+
 import NavigationOrigin from "./pages/demo/NavigationOrigin";
 import NavigationTarget from "./pages/demo/NavigationTarget";
 import SubPage from "./pages/demo/subpage/SubPage";
@@ -43,40 +45,47 @@ function preloadRoutes() {
 preloadRoutes();
 
 const root = createRoot(rootElement);
+const theme = {
+  colors: {
+    background: '#333',
+    text: '#fff',
+    // 其他颜色属性
+  },
+  mode: 'dark' // 可以把当前模式作为属性
+  // 其他主题相关属性
+};
 root.render(
-  <StyleProvider transformers={[px2rem]}>
-    <StrictMode>
-      <Provider store={store}>
-        <HashRouter>
-          <Suspense fallback={<Loading />} >
-            <Routes>
-              <Route element={<Cv />} path="/resume" />
+    <StyleProvider transformers={[px2rem]}>
+      <ThemeProvider theme={theme}>
+      <StrictMode>
+        <Provider store={store}>
+          <HashRouter>
+            <Suspense fallback={<Loading />} >
+              <Routes>
+                <Route element={<Cv />} path="/resume" />
 
-              <Route element={<NavigationOrigin />} path="/origin">
-                <Route element={<SubPage />} path="subPage" />
-              </Route>
-              <Route element={<NavigationTarget />} path="/target" />
-              <Route element={<Layout />} path="/">
-                <Route element={<Home />} path="home" />
-                <Route element={<Project />} path="project" />
-                <Route element={<Note />} path="notebook" />
-                {/* Redirect from root to /home */}
-                <Route element={<Navigate replace to="/home" />} path="/" />
-                <Route element={<Navigate replace to="/home" />} path="*" />
-              </Route>
-              {/* Add a catch-all redirect to handle any unmatched routes */}
-              <Route element={<Navigate replace to="/" />} path="*" />
-            </Routes>
-          </Suspense>
-
-
-        </HashRouter>
-      </Provider>
-    </StrictMode>
-  </StyleProvider>,
+                <Route element={<NavigationOrigin />} path="/origin">
+                  <Route element={<SubPage />} path="subPage" />
+                </Route>
+                <Route element={<NavigationTarget />} path="/target" />
+                <Route element={<Layout />} path="/">
+                  <Route element={<Home />} path="home" />
+                  <Route element={<Project />} path="project" />
+                  <Route element={<Note />} path="notebook" />
+                  {/* Redirect from root to /home */}
+                  <Route element={<Navigate replace to="/home" />} path="/" />
+                  <Route element={<Navigate replace to="/home" />} path="*" />
+                </Route>
+                {/* Add a catch-all redirect to handle any unmatched routes */}
+                <Route element={<Navigate replace to="/" />} path="*" />
+              </Routes>
+            </Suspense>
+          </HashRouter>
+        </Provider>
+      </StrictMode>
+      </ThemeProvider>
+    </StyleProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

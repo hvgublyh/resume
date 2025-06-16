@@ -27,7 +27,6 @@ function CV() {
       <section>
         <Education />
       </section>
-
       <section>
         <Skill />
       </section>

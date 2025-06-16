@@ -1,16 +1,26 @@
 import { Image } from "antd";
 import { useSelector } from 'react-redux'
+import styled from "styled-components";
 
 import img_zhengkj from '../../../assert/images/zhengkj.jpg'
 import { TypeHeader } from '../../../assert/ts/MessageType'
 import { TypeStore } from '../../../redux/TypeStore';
 import css from './css/header.module.scss'
 
-function Header() {
 
+// 先定义样式组件
+const StyledHeader = styled.div`
+  .header_img {
+    
+    img {
+      border-radius: 3px;
+    }
+  }
+`;
+function Header() {
   const header: TypeHeader = useSelector((state: TypeStore) => state.userState.message.header)
   return (
-    <div className={css.header + ' clearfix'}>
+    <StyledHeader className={css.header + ' clearfix'}>
       <div className="fl">
         <div className="text-center name">
           {header.name}
@@ -29,8 +39,8 @@ function Header() {
           src={img_zhengkj}
         />
       </div>
-    </div>
+    </StyledHeader>
   );
 }
 
-export default Header;
+export default Header
