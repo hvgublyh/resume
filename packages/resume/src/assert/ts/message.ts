@@ -17,16 +17,16 @@ const message = {
         {
           duty: "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Jest进行单元测试。\n使用React和Antd进行项目开发。\n使用Verdaccio搭建私有npm仓库, 统一管理公司内部组件。\n使用monorepo管理多个项目，并进行组件库的开发。",
           introduce:
-            "这是一款基于PC端的低代码开发平台，专注于实现高度自定义的预热功能。平台内置丰富的组件库，用户能够通过拖拽操作自由组合组件，快速生成个性化的预热材料。同时，平台提供模板设计、内容分享和数据统计等多项实用功能，帮助用户高效完成预热任务并适应多样化场景。",
+            "这是基于PC端的预热材料开发平台，专注于实现高度自定义的预热功能。平台内置丰富的组件库，用户能够通过拖拽操作自由组合组件，快速生成个性化的预热材料。同时，平台提供模板设计、内容分享和数据统计等多项实用功能，帮助用户高效完成预热任务并适应多样化场景。",
           name: "宣传预热",
-          tech: ["React", "Antd"],
+          tech: ["React", "Antd", 'Redux', "ECharts", "Jest", "Verdaccio", "Sentry", "Monorepo"],
         },
         {
-          duty: "技术选型及项目框架搭建。\n使用Eslint和husky规范代码和git提交。\n使用Vue3.0和Composition API构建项目。\n使用Jest和Vue-test-utils进行单元测试。\n使用Verdaccio搭建私有npm仓库, 统一管理公司内部组件。\n使用monorepo管理多个项目，并进行组件库的开发。",
+          duty: "技术选型及项目框架搭建。\n页面及功能实现。\n使用ECharts进行数据可视化。\n使用Jest和Vue-test-utils进行单元测试。",
           introduce:
             "收入统筹项目 是一款企业管理系统，主要用于 企业收入目标的收集、下发、填报与分析，帮助企业高效管理财务数据和运营目标。该项目采用 Vue 作为前端框架，结合 Element UI 组件库和 ECharts 数据可视化，打造流畅的用户体验和强大的数据展示能力。",
           name: "收入统筹",
-          tech: ["Vue", "ElementUI"],
+          tech: ["Vue", "ElementUI", "vuex", "ECharts", "Jest", "Vue-test-utils"],
         },
         {
           duty: "技术选型及项目框架搭建。\n使用ECharts进行数据可视化。\n使用Jest和Vue-test-utils进行单元测试。",
@@ -96,8 +96,7 @@ const message = {
     "擅长 Vue、React 及其生态系统，如 Element UI、Ant Design 组件库，精通 ECharts 可视化库。",
     "熟悉 Nuxt ，能够快速搭建服务端渲染的前端应用。",
     "熟悉 qiankun, 能够快速搭建微前端应用。",
-    "熟悉 taro 和 expo managed workflow，能够快速搭建跨平台的移动端应用。",
-    "深度掌握 JavaScript 及现代前端技术，包括 ES6+、TypeScript、Webpack、Monorepo 等，并熟悉 低代码开发 领域。",
+    "深度掌握 JavaScript 及现代前端技术，包括 ES6+、TypeScript、Webpack、Monorepo 等，并熟悉低代码开发领域。",
     "专注前端性能优化、安全性和跨域问题，具备 高效模块化开发 与 组件化设计 能力，能够构建 可扩展、高性能 的前端架构。",
   ],
 };
